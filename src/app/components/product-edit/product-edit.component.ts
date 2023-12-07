@@ -26,9 +26,21 @@ ngOnInit(): void {
   price:[product.price,Validators.required],
   quantity:[product.quantity,Validators.required],
   selected:[product.selected,Validators.required],
-  available:[product.available,Validators.required]
+  available:[product.available,Validators.required],
+  image: ["",Validators.required] // Champ pour l'image
   })
   });
+  }
+
+  onImageSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        this.productFormGroup?.get('image')?.setValue(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   }
   onUpdateProduct() {
   this.productsService.updateProduct(this.productFormGroup?.value)

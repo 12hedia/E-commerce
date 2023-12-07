@@ -41,7 +41,7 @@ export class PanierComponent implements OnInit {
       // Vérifie si le produit a été désélectionné
       if (!p.selected) {
         // Actualise la page
-        this.location.reload();
+       window.location.reload();
       }
     });
   }

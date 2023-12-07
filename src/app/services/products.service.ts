@@ -9,9 +9,9 @@ export class ProductsService {
 constructor(private http:HttpClient) {
 }
 host: string= "http://localhost:3000";
-getAllProducts():Observable<Product[]>{
-return this.http.get<Product[]>(this.host+"/products");
-}
+getAllProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.host}/products`);
+  }
 getSelectedProducts():Observable<Product[]>{
 return this.http.get<Product[]>(this.host+"/products?selected=true");
 }
@@ -30,9 +30,9 @@ deleteProduct(product:Product):Observable<void>{
 product.selected=!product.selected;
 return this.http.delete<void>(this.host+"/products/"+product.id);
 }
-save(product:Product):Observable<Product>{
-return this.http.post<Product>(this.host+"/products",product);
-}
+save(product: Product): Observable<Product> {
+    return this.http.post<Product>(`${this.host}/products`, product);
+  }
 getProduct(id:number):Observable<Product>{
 return this.http.get<Product>(this.host+"/products/"+id);
 }

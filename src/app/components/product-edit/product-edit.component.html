@@ -24,6 +24,11 @@
         <input type="text" class="form-control" formControlName="quantity">
         </div>
         <div class="form-group">
+            <label>Image</label>
+            <input type="file" (change)="onImageSelected($event)" class="form-control" accept="image/*">
+            <img *ngIf="productFormGroup.controls['image'].value" [src]="productFormGroup.controls['image'].value" alt="Selected Image" class="mt-2" style="max-width: 100%">
+          </div>
+        <div class="form-group">
         <label>Selected</label>
         <input type="checkbox" formControlName="selected" class="form-check">
         </div>

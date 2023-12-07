@@ -18,14 +18,28 @@ price:[0,Validators.required],
 quantity:[0,Validators.required],
 selected:[true,Validators.required],
 available:[true,Validators.required],
+image: ["",Validators.required] // Champ pour l'image
 });
 }
-onSaveProduct() {
-this.submitted=true;
-if(this.productFormGroup?.invalid) return;
-this.productsService.save(this.productFormGroup?.value)
-.subscribe(data=>{
-alert("Success Saving product");
-});
-}
-}
+onImageSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        this.productFormGroup?.get('image')?.setValue(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  onSaveProduct() {
+    this.submitted = true;
+
+    if (this.productFormGroup?.valid) {
+      this.productsService.save(this.productFormGroup.value).subscribe(() => {
+        alert("Success Product added");
+        this.productFormGroup?.reset();
+        this.submitted = false;
+      });
+    }
+}}
