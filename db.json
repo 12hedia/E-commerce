@@ -5,7 +5,7 @@
       "name": "HOUD",
       "price": "43",
       "quantity": "45",
-      "selected": true,
+      "selected": false,
       "available": true
     },
     {
@@ -31,14 +31,6 @@
       "quantity": "6",
       "selected": false,
       "available": false
-    },
-    {
-      "name": "stylo",
-      "price": "1000",
-      "quantity": "50",
-      "selected": true,
-      "available": true,
-      "id": "AyZvBxE"
     }
   ],
   "users": [
@@ -61,6 +53,11 @@
       "username": "admin",
       "password": "123",
       "id": 4
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": 5
     }
   ]
 }
