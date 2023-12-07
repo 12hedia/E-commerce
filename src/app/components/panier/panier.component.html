@@ -1,33 +1,44 @@
 <!-- panier.component.html -->
 
 <div class="container mt-5">
-    <h2>Mon Panier</h2>
-  
-    <div *ngIf="products$ | async as products">
-      <div [ngSwitch]="products.dataState">
-        <div *ngSwitchCase="DataStateEnum.LOADING">Chargement en cours...</div>
-        <div *ngSwitchCase="DataStateEnum.ERROR">Une erreur s'est produite: {{ products.errorMessage }}</div>
-        <div *ngSwitchCase="DataStateEnum.LOADED">
-            <div *ngIf="products.data && products.data.length === 0">
-                <p>Aucun produit sélectionné.</p>
-          </div>
-          <div *ngFor="let product of products.data">
-            <div class="card mt-3">
-              <div class="card-body">
-                <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">Price: {{ product.price }} $</p>
-                <p class="card-text">Quantity: {{ product.quantity }}</p>
-                <p class="card-text">
-                  Availability: <span [ngClass]="{'text-success': product.available, 'text-danger': !product.available}">
-                    {{ product.available ? 'Available' : 'Not Available' }}
-                  </span>
-                </p>
-                <button class="btn btn-primary" (click)="onSelect(product)" >UnSelect</button>
-              </div>
-            </div>
-          </div>
+  <h2>Mon Panier</h2>
+
+  <div *ngIf="products$ | async as products">
+    <div [ngSwitch]="products.dataState">
+      <div *ngSwitchCase="DataStateEnum.LOADING">Chargement en cours...</div>
+      <div *ngSwitchCase="DataStateEnum.ERROR">Une erreur s'est produite: {{ products.errorMessage }}</div>
+      <div *ngSwitchCase="DataStateEnum.LOADED">
+        <div *ngIf="products.data && products.data.length === 0">
+          <p>Aucun produit sélectionné.</p>
         </div>
+
+        <table class="table mt-3">
+          <thead>
+            <tr>
+              <th scope="col">Nom</th>
+              <th scope="col">Prix</th>
+              <th scope="col">Quantité</th>
+              <th scope="col">Disponibilité</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products.data">
+              <td>{{ product.name }}</td>
+              <td>{{ product.price }} $</td>
+              <td>{{ product.quantity }}</td>
+              <td>
+                <span [ngClass]="{'text-success': product.available, 'text-danger': !product.available}">
+                  {{ product.available ? 'Available' : 'Not Available' }}
+                </span>
+              </td>
+              <td>
+                <button class="btn btn-primary" (click)="onSelect(product)">UnSelect</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-  
+</div>

@@ -1,23 +1,32 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
- <!-- Brand -->
- <a class="navbar-brand" href="#">
-    
- </a>
- <!-- Links -->
- <ul class="navbar-nav">
- <li class="nav-item">
- <a class="nav-link" routerLink="/">Home</a>
- </li>
- <li class="nav-item">
- <a class="nav-link" routerLink="/buy">Products</a>
- </li>
-
- <li class="nav-item">
-   <a class="nav-link" routerLink="/panier">panier</a>
-   </li> 
-
- <li class="nav-item">
-    <a class="nav-link" routerLink="/login">Login</a>
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">
+    <img src="assets/logo.png" [style.maxHeight.px]="70" [style.width.px]="150"> 
+  </a>
+  <!-- Links -->
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/">
+        Home
+      </a>
     </li>
- </ul>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/buy">
+        Products
+      </a>
+    </li>
+  </ul>
+  
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/panier">
+        <img src="assets/panier.png" [style.maxHeight.px]="50" [style.width.px]="50"> 
+      </a>
+    </li>
+    <li class="nav-item" id="HH">
+      <a class="nav-link" routerLink="/login">
+        <img src="assets/utilisateur.png" [style.maxHeight.px]="50" [style.width.px]="50"> 
+      </a>
+    </li>
+  </ul>
 </nav>

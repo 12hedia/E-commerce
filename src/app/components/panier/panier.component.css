@@ -1,0 +1,76 @@
+/* panier.component.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #3498db;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .card-text {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+  }
+  
+  .text-success {
+    color: #27ae60;
+  }
+  
+  .text-danger {
+    color: #e74c3c;
+  }
+  
+  .btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+  }
+  
+  .img-container {
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1.1);
+  }
+  

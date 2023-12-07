@@ -1,0 +1,62 @@
+/* home.component.css */
+#img{
+  left: 0px;
+   height:450px;
+   right: 0px;
+   width: 100%;
+   position:  relative;
+   animation-name: trans ;
+   animation-duration:15s;
+   animation-iteration-count:infinite ;
+   animation-timing-function:steps(0.2,end);
+}
+@keyframes trans {
+   0%{background:url(C:\Users\HOUD\Downloads\imaged.jpg);background-repeat: round ; width: 100%; height: 430px;}
+   50%{background:url(C:\Users\HOUD\Downloads\imageAA.jpg);background-repeat: round; width: 100%; height: 430px;}
+   100%{background:url(C:\Users\HOUD\Downloads\imagev.jpg); background-repeat: round;width: 100%; height: 430px;}
+
+}
+.container {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f9fa; /* Couleur de fond légère */
+}
+
+h1 {
+  font-size: 3em;
+  color: #007bff; /* Couleur du texte */
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #555; /* Couleur du texte plus foncée */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #007bff; /* Couleur du lien */
+}
+
+/* Ajout de l'animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}

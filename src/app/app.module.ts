@@ -12,7 +12,8 @@ import { ProductEditComponent } from './components/product-edit/product-edit.com
 import { LoginComponent } from './components/login/login.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { PanierComponent } from './components/panier/panier.component';
-import { FooterComponent } from './footer/footer.component';
+
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
