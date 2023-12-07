@@ -1,0 +1,23 @@
+<!-- buy.component.html -->
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let product of products">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">Price: {{ product.price }} $</p>
+            <p class="card-text">Quantity: {{ product.quantity }}</p>
+            <p class="card-text">
+              Availability: <span [ngClass]="{'text-success': product.available, 'text-danger': !product.available}">
+                {{ product.available ? 'Available' : 'Not Available' }}
+              </span>
+            </p>
+            <button class="btn btn-sm" (click)="onSelect(product)" [ngClass]="product.selected?'btnsuccess':'btn-danger'" [disabled]="!product.available">Buy</button>
+            
+          </div>
+        </div>
+      </div>
+    </div> <br> 
+  </div>
+  

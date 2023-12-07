@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "HOUD",
+      "price": "43",
+      "quantity": "45",
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "printer",
+      "price": 300,
+      "quantity": 600,
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": "3",
+      "name": "smartphone",
+      "price": 1200,
+      "quantity": 100,
+      "selected": false,
+      "available": true
+    },
+    {
+      "id": "MFnz4AN",
+      "name": "roua",
+      "price": "676",
+      "quantity": "6",
+      "selected": false,
+      "available": false
+    },
+    {
+      "name": "stylo",
+      "price": "1000",
+      "quantity": "50",
+      "selected": true,
+      "available": true,
+      "id": "AyZvBxE"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "pass": "123"
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": 4
+    }
+  ]
+}
